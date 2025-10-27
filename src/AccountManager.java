@@ -13,8 +13,10 @@ public class AccountManager {
         if(!exists){
             Account newAcc = new Account(0,accNo,accHolderName);
             accountsList.add(newAcc);
+            System.out.println("New account created!!\n"+"Account number: "+accNo+"\n Name: "+accHolderName);
             return newAcc;
         }
+        System.out.println("Account fetched successfully");
         return accountsList.stream().filter(acc -> acc.getAccountNo() == accNo).findFirst().orElse(null);
     }
 
