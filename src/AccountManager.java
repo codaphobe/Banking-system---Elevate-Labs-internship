@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class AccountManager {
 
-    private final ArrayList<Account> accountsList = new ArrayList<>();
+    protected final ArrayList<Account> accountsList = new ArrayList<>();
 
     private boolean checkAccountExists(long accNo){
         return accountsList.stream().anyMatch(acc -> acc.getAccountNo() == accNo);
